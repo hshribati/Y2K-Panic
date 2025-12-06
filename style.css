@@ -1,0 +1,87 @@
+/* ===== 90s Retro Website Style ===== */
+
+body {
+    background: black;
+    color: #00ff00; /* neon green like old CRT monitors */
+    font-family: "Courier New", monospace;
+    margin: 0;
+    padding: 0;
+}
+
+/* 90s header gradient */
+header {
+    background: linear-gradient(to right, #0000ff, #ff00ff);
+    color: white;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 4px dotted yellow;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Navigation bar */
+nav {
+    background: #111;
+    padding: 10px;
+    border-bottom: 3px solid #00ffff;
+    text-align: center;
+}
+
+nav a {
+    color: #00ffff;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 20px;
+    padding: 5px 10px;
+    border: 2px solid #00ffff;
+    border-radius: 5px;
+}
+
+nav a:hover {
+    background: #00ffff;
+    color: black;
+}
+
+/* Main content area */
+main {
+    background: #111;
+    padding: 20px;
+    margin: 20px;
+    border: 3px dashed #ff00ff;
+}
+
+/* Section titles */
+h2 {
+    color: yellow;
+    text-shadow: 2px 2px magenta;
+    border-bottom: 2px dotted #00ffff;
+    padding-bottom: 5px;
+}
+
+/* 90s style bordered images */
+img {
+    border: 4px ridge #00ffff;
+    margin: 10px 0;
+    max-width: 100%;
+}
+
+/* Footer */
+footer {
+    background: #222;
+    color: #00ff00;
+    text-align: center;
+    padding: 15px;
+    border-top: 4px dotted yellow;
+    margin-top: 40px;
+}
+
+/* OPTIONAL: blinking text (true 90s fashion) */
+.blink {
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+}
