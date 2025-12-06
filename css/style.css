@@ -95,3 +95,13 @@ footer {
     border-top: 4px solid #3d474e;
     box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.25);
 }
+
+.section-image {
+    width: 100%;
+    max-width: 500px;
+    display: block;
+    margin: 0 auto 20px auto;
+    border: 2px solid #444;
+    border-radius: 4px;
+}
+
