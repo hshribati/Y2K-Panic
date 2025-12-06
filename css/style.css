@@ -29,9 +29,11 @@ nav {
     padding: 10px 0;
     border-bottom: 2px solid #9da5ab;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+    text-align: center; /* center all links */
 }
 
 nav a {
+    display: inline-block; /* allow spacing and still inline */
     background-color: #e3dfd7; /* muted beige */
     color: #2d2d2d;
     padding: 12px 20px;
