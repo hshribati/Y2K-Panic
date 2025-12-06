@@ -10,7 +10,7 @@ body {
 
 /* ====== HEADER ====== */
 header {
-    background: linear-gradient(to bottom, #a3d2f2; /* modern gradient */
+    background: linear-gradient(to bottom, #a3d2f2, #78c0e0); /* light blue gradient */
     color: white;
     padding: 25px;
     text-align: center;
@@ -104,4 +104,3 @@ footer {
     border: 2px solid #444;
     border-radius: 4px;
 }
-
