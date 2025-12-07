@@ -44,19 +44,7 @@
         </div>
     </section>
 
-    <!-- ====== AUTOMATIC SECOND SLIDER SCRIPT ====== -->
-    <script>
-        function autoSlideSecondSlider() {
-            const slides = document.querySelectorAll(".second-slide");
-            let current = document.querySelector(".second-slide.active");
-            let index = Array.from(slides).indexOf(current);
-            current.classList.remove("active");
-            index = (index + 1) % slides.length;
-            slides[index].classList.add("active");
-        }
 
-        setInterval(autoSlideSecondSlider, 3000);
-    </script>
 
     <!-- ---------------------- -->
     <!-- VIDEOS SECTION -->
