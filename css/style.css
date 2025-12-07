@@ -175,28 +175,30 @@ footer {
     color: #333;
 }
 
-/* ====== SECOND SLIDER ====== */
+/* ====== SECOND SLIDER (VERTICAL) ====== */
 .second-slider-container {
-    width: 100%;
-    max-width: 650px;
-    height: 500px; /* taller height */
+    width: 300px;          /* smaller width */
+    height: 500px;         /* taller height */
     margin: 20px auto;
     overflow: hidden;
     border: 2px solid #444;
     border-radius: 6px;
 }
 
-.second-slider img {
-    width: 100%;
+.second-slider {
+    display: flex;
+    flex-direction: column; /* stack images vertically */
     height: 100%;
-    object-fit: cover;
-    display: none;
 }
 
-.second-slider img.active {
-    display: block;
-    transition: opacity 0.5s ease-in-out;
+.second-slider img {
+    width: 100%;
+    height: auto;           /* adjust height automatically */
+    max-height: 160px;      /* optional: limit image height */
+    object-fit: cover;
+    margin-bottom: 5px;     /* space between images */
 }
+
 
 
 
