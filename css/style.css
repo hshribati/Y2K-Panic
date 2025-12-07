@@ -197,11 +197,12 @@ footer {
     object-fit: cover;     /* fill the width nicely */
 }
 
+/* ====== VERTICAL SECOND SLIDER ====== */
 .vertical-slider {
-    width: 300px;          /* visible width */
-    height: 450px;         /* visible height */
+    width: 300px;          /* container width */
+    height: 200px;         /* height of one image */
     margin: 20px auto;
-    overflow: hidden;
+    overflow: hidden;      /* hide images outside container */
     border: 2px solid #444;
     border-radius: 6px;
 }
@@ -214,22 +215,16 @@ footer {
 
 .vertical-slides img {
     width: 100%;
-    height: auto;
-    display: block;
-    margin-bottom: 10px;
-    border-radius: 4px;
+    height: 200px;         /* same as container height */
     object-fit: cover;
+    display: block;
 }
 
 @keyframes verticalScroll {
-    0% { transform: translateY(0); }
-    33% { transform: translateY(-200%); }
-    66% { transform: translateY(-400%); }
+    0%   { transform: translateY(0); }
+    33%  { transform: translateY(-200px); }  /* move up by 1 image */
+    66%  { transform: translateY(-400px); }  /* move up by 2 images */
     100% { transform: translateY(0); }
 }
-
-
-
-
 
 
