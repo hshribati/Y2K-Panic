@@ -31,16 +31,35 @@
         
     </div>
 
-    <!-- ---------------------- -->
-    <!-- IMAGE SET 2 (SLIDER) -->
-    <!-- ---------------------- -->
-    <h2>Image Set 2 – Automatic Slider</h2>
-    <div class="slider">
-        <div class="slides">
-            <img src="images/image7.png" alt="Image 4">
-            <img src="images/image8.png" alt="Image 5">
-            <img src="images/image9.png" alt="Image 6">
+<div class="container">
+    <!-- ====== SECOND IMAGE SLIDER ====== -->
+<section id="second-slider">
+    <h2>More Images</h2>
+    <div class="slider-container">
+        <div class="slider">
+            <img src="images/image4.png" class="slide active" alt="Image 4">
+            <img src="images/image5.png" class="slide" alt="Image 5">
+            <img src="images/image6.png" class="slide" alt="Image 6">
         </div>
+    </div>
+</section>
+
+<!-- ====== AUTOMATIC SLIDER SCRIPT ====== -->
+<script>
+    function autoSlide(sliderContainer) {
+        const slides = sliderContainer.querySelectorAll(".slide");
+        let current = sliderContainer.querySelector(".slide.active");
+        let index = Array.from(slides).indexOf(current);
+        current.classList.remove("active");
+        index = (index + 1) % slides.length;
+        slides[index].classList.add("active");
+    }
+
+    const sliders = document.querySelectorAll(".slider-container");
+    sliders.forEach(slider => {
+        setInterval(() => autoSlide(slider), 3000);
+    });
+</script>
     </div>
 
     <!-- ---------------------- -->
