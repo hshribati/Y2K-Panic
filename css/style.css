@@ -135,50 +135,5 @@ footer {
     transition: opacity 0.5s ease-in-out;
 }
 
-/* Vertical image column */
-.image-column {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    align-items: center;
-}
-
-.image-column img {
-    width: 100%;
-    max-width: 600px;
-    height: auto;
-    border: 2px solid #444;
-    border-radius: 6px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.25);
-}
-
-/* Slider container */
-.slider {
-    width: 100%;
-    max-width: 650px;
-    margin: 25px auto;
-    overflow: hidden;
-    border-radius: 6px;
-    border: 2px solid #444;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
-}
-
-/* Sliding animation */
-.slides {
-    display: flex;
-    width: 300%;
-    animation: slide 12s infinite;
-}
-
-.slides img {
-    width: 100%;
-    height: auto;
-}
-
-@keyframes slide {
-    0% { transform: translateX(0); }
-    33% { transform: translateX(-100%); }
-    66% { transform: translateX(-200%); }
-    100% { transform: translateX(0); }
-}
+  
 
