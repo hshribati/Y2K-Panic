@@ -135,5 +135,19 @@ footer {
     transition: opacity 0.5s ease-in-out;
 }
 
+.image-row {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.image-row img {
+    width: 250px;   /* adjust if needed */
+    height: auto;
+    border-radius: 8px;
+}
+
   
 
