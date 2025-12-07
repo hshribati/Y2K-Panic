@@ -118,6 +118,22 @@
         index = (index - 1 + slides.length) % slides.length;
         slides[index].classList.add("active");
     }
+
+    // ====== AUTOMATIC SLIDES ======
+    function autoSlide(sliderContainer) {
+        const slides = sliderContainer.querySelectorAll(".slide");
+        let current = sliderContainer.querySelector(".slide.active");
+        let index = Array.from(slides).indexOf(current);
+        current.classList.remove("active");
+        index = (index + 1) % slides.length;
+        slides[index].classList.add("active");
+    }
+
+    // Start automatic slides for both sliders
+    const sliders = document.querySelectorAll(".slider-container");
+    sliders.forEach(slider => {
+        setInterval(() => autoSlide(slider), 3000); // change every 3 seconds
+    });
 </script>
 
 </body>
