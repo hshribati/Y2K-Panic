@@ -28,39 +28,35 @@
         <img src="images/image1.png" alt="Image 1">
         <img src="images/image3.png" alt="Image 3">
         <img src="images/image2.png" alt="Image 2">
-        
     </div>
 
-<div class="container">
-    <!-- ====== SECOND IMAGE SLIDER ====== -->
-<section id="second-slider">
-    <h2>More Images</h2>
-    <div class="slider-container">
-        <div class="slider">
-            <img src="images/image7.png" class="slide active" alt="Image 7">
-            <img src="images/image8.png" class="slide" alt="Image 8">
-            <img src="images/image9.png" class="slide" alt="Image 9">
+    <!-- ---------------------- -->
+    <!-- IMAGE SET 2 (ISOLATED SLIDER) -->
+    <!-- ---------------------- -->
+    <section id="second-slider">
+        <h2>More Images</h2>
+        <div class="second-slider-container">
+            <div class="second-slider">
+                <img src="images/image7.png" class="second-slide active" alt="Image 7">
+                <img src="images/image8.png" class="second-slide" alt="Image 8">
+                <img src="images/image9.png" class="second-slide" alt="Image 9">
+            </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<!-- ====== AUTOMATIC SLIDER SCRIPT ====== -->
-<script>
-    function autoSlide(sliderContainer) {
-        const slides = sliderContainer.querySelectorAll(".slide");
-        let current = sliderContainer.querySelector(".slide.active");
-        let index = Array.from(slides).indexOf(current);
-        current.classList.remove("active");
-        index = (index + 1) % slides.length;
-        slides[index].classList.add("active");
-    }
+    <!-- ====== AUTOMATIC SECOND SLIDER SCRIPT ====== -->
+    <script>
+        function autoSlideSecondSlider() {
+            const slides = document.querySelectorAll(".second-slide");
+            let current = document.querySelector(".second-slide.active");
+            let index = Array.from(slides).indexOf(current);
+            current.classList.remove("active");
+            index = (index + 1) % slides.length;
+            slides[index].classList.add("active");
+        }
 
-    const sliders = document.querySelectorAll(".slider-container");
-    sliders.forEach(slider => {
-        setInterval(() => autoSlide(slider), 3000);
-    });
-</script>
-    </div>
+        setInterval(autoSlideSecondSlider, 3000);
+    </script>
 
     <!-- ---------------------- -->
     <!-- VIDEOS SECTION -->
@@ -120,7 +116,7 @@
                 frameborder="0"
                 allowfullscreen>
             </iframe>
-            <p class="video-desc"> Man prepares for Y2K doomsday amid panic in 1999, saying No one knows what is going to happen and that people have to prepare.</p>
+            <p class="video-desc">Man prepares for Y2K doomsday amid panic in 1999, saying no one knows what is going to happen and that people have to prepare.</p>
         </div>
 
         <!-- Video 6 -->
@@ -131,7 +127,7 @@
                 frameborder="0"
                 allowfullscreen>
             </iframe>
-            <p class="video-desc"> News archive: Asking people in shopping malls how they prepared for Y2K </p>
+            <p class="video-desc">News archive: Asking people in shopping malls how they prepared for Y2K.</p>
         </div>
 
     </div>
