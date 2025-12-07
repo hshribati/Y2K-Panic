@@ -178,26 +178,25 @@ footer {
 /* ====== SECOND SLIDER (VERTICAL) ====== */
 .second-slider-container {
     width: 300px;          /* smaller width */
-    height: 500px;         /* taller height */
+    max-height: 500px;     /* container height */
     margin: 20px auto;
-    overflow: hidden;
+    overflow-y: auto;      /* vertical scrolling if needed */
     border: 2px solid #444;
     border-radius: 6px;
-}
-
-.second-slider {
     display: flex;
     flex-direction: column; /* stack images vertically */
-    height: 100%;
+    gap: 10px;             /* spacing between images */
+    padding: 5px;
 }
 
-.second-slider img {
-    width: 100%;
-    height: auto;           /* adjust height automatically */
-    max-height: 160px;      /* optional: limit image height */
-    object-fit: cover;
-    margin-bottom: 5px;     /* space between images */
+.second-slider-container img {
+    width: 100%;           /* fit container width */
+    height: auto;          /* keep aspect ratio */
+    display: block;
+    border-radius: 4px;
+    object-fit: cover;     /* fill the width nicely */
 }
+
 
 
 
