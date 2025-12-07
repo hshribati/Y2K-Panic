@@ -20,6 +20,35 @@
 </nav>
 
 <div class="container">
+    <!-- ====== SECOND IMAGE SLIDER ====== -->
+<section id="second-slider">
+    <h2>More Images</h2>
+    <div class="slider-container">
+        <div class="slider">
+            <img src="images/image4.png" class="slide active" alt="Image 4">
+            <img src="images/image5.png" class="slide" alt="Image 5">
+            <img src="images/image6.png" class="slide" alt="Image 6">
+        </div>
+    </div>
+</section>
+
+<!-- ====== AUTOMATIC SLIDER SCRIPT ====== -->
+<script>
+    function autoSlide(sliderContainer) {
+        const slides = sliderContainer.querySelectorAll(".slide");
+        let current = sliderContainer.querySelector(".slide.active");
+        let index = Array.from(slides).indexOf(current);
+        current.classList.remove("active");
+        index = (index + 1) % slides.length;
+        slides[index].classList.add("active");
+    }
+
+    const sliders = document.querySelectorAll(".slider-container");
+    sliders.forEach(slider => {
+        setInterval(() => autoSlide(slider), 3000);
+    });
+</script>
+
 
     <h2>Main Paper</h2>
 
