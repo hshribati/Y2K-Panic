@@ -223,8 +223,8 @@ footer {
 
 @keyframes verticalScroll {
     0% { transform: translateY(0); }
-    33% { transform: translateY(-100%); }
-    66% { transform: translateY(-200%); }
+    33% { transform: translateY(-200%); }
+    66% { transform: translateY(-400%); }
     100% { transform: translateY(0); }
 }
 
