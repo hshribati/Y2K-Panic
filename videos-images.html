@@ -33,16 +33,31 @@
     <!-- ---------------------- -->
     <!-- IMAGE SET 2 (ISOLATED SLIDER) -->
     <!-- ---------------------- -->
-    <section id="second-slider">
-        <h2>More Images</h2>
+<section id="second-slider">
+    <h2>More Images</h2>
+    <div class="vertical-slider-container">
         <div class="vertical-slider">
-        <div class="vertical-slides">
-                <img src="images/image7.png" class="second-slide active" alt="Image 7">
-                <img src="images/image8.png" class="second-slide" alt="Image 8">
-                <img src="images/image9.png" class="second-slide" alt="Image 9">
-            </div>
+            <img src="images/image7.png" class="vertical-slide active" alt="Image 7">
+            <img src="images/image8.png" class="vertical-slide" alt="Image 8">
+            <img src="images/image9.png" class="vertical-slide" alt="Image 9">
         </div>
-    </section>
+    </div>
+</section>
+
+<!-- Automatic Vertical Slider Script -->
+<script>
+    function autoVerticalSlide() {
+        const slides = document.querySelectorAll(".vertical-slide");
+        const current = document.querySelector(".vertical-slide.active");
+        let index = Array.from(slides).indexOf(current);
+        current.classList.remove("active");
+        index = (index + 1) % slides.length;
+        slides[index].classList.add("active");
+    }
+
+    setInterval(autoVerticalSlide, 3000); // Change every 3 seconds
+</script>
+
 
 
 
